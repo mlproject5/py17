@@ -4,6 +4,13 @@ import re
 
 st.set_page_config(page_title='National Identification', page_icon='ssn.png', layout="centered", initial_sidebar_state="auto", menu_items=None)
 
+hide_streamlit_style = """
+    <style>
+    footer {visibility: hidden;}
+    </style>
+    """
+st.markdown(hide_streamlit_style, unsafe_allow_html=True)
+
 def ssn():
     def generate_ssn():
         ssn = ''
